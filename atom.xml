@@ -3,11 +3,11 @@
   <title>Hexo</title>
   
   
-  <link href="http://example.com/atom.xml" rel="self"/>
+  <link href="https://czyhash.github.io/atom.xml" rel="self"/>
   
-  <link href="http://example.com/"/>
+  <link href="https://czyhash.github.io/"/>
   <updated>2021-04-23T04:36:21.233Z</updated>
-  <id>http://example.com/</id>
+  <id>https://czyhash.github.io/</id>
   
   <author>
     <name>John Doe</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="http://example.com/2021/04/23/hello-world/"/>
-    <id>http://example.com/2021/04/23/hello-world/</id>
+    <link href="https://czyhash.github.io/2021/04/23/hello-world/"/>
+    <id>https://czyhash.github.io/2021/04/23/hello-world/</id>
     <published>2021-04-23T04:36:21.233Z</published>
     <updated>2021-04-23T04:36:21.233Z</updated>
     
