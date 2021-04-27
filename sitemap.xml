@@ -2,21 +2,21 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://czyhash.github.io/photo/index.html</loc>
-    
-    <lastmod>2021-04-27</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://czyhash.github.io/2021/04/27/spring/</loc>
-    
-    <lastmod>2021-04-27</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://czyhash.github.io/2021/04/23/hello-world/</loc>
+    
+    <lastmod>2021-04-27</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://czyhash.github.io/2021/04/23/spring/</loc>
+    
+    <lastmod>2021-04-27</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://czyhash.github.io/photo/index.html</loc>
     
     <lastmod>2021-04-27</lastmod>
     
