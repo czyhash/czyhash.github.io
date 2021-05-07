@@ -1,13 +1,13 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Spring笔记 | CHEN</title><meta name="author" content="chen"><meta name="copyright" content="chen"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="欢迎来到【CHEN】，相关代码资源访问[github]。https:&#x2F;&#x2F;github.com&#x2F;czyhash&#x2F;czyhash.github.io 第一章spring全家桶：spring ， springmvc ，spring boot , spring cloud    spring: 出现是在2002左右，解决企业开发的难度。减轻对项目模块之间的管理，          类和类之间的管理， 帮助">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Spring笔记 | CHEN</title><meta name="author" content="chen"><meta name="copyright" content="chen"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="欢迎来到【CHEN】，相关代码资源访问github。https:&#x2F;&#x2F;github.com&#x2F;czyhash&#x2F;czyhash.github.io 第一章spring全家桶：spring ， springmvc ，spring boot , spring cloud    spring: 出现是在2002左右，解决企业开发的难度。减轻对项目模块之间的管理，          类和类之间的管理， 帮助开发">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Spring笔记">
 <meta property="og:url" content="https://czyhash.github.io/2021/04/23/spring/index.html">
 <meta property="og:site_name" content="CHEN">
-<meta property="og:description" content="欢迎来到【CHEN】，相关代码资源访问[github]。https:&#x2F;&#x2F;github.com&#x2F;czyhash&#x2F;czyhash.github.io 第一章spring全家桶：spring ， springmvc ，spring boot , spring cloud    spring: 出现是在2002左右，解决企业开发的难度。减轻对项目模块之间的管理，          类和类之间的管理， 帮助">
+<meta property="og:description" content="欢迎来到【CHEN】，相关代码资源访问github。https:&#x2F;&#x2F;github.com&#x2F;czyhash&#x2F;czyhash.github.io 第一章spring全家桶：spring ， springmvc ，spring boot , spring cloud    spring: 出现是在2002左右，解决企业开发的难度。减轻对项目模块之间的管理，          类和类之间的管理， 帮助开发">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/waterchen520/cdn@5.0/qiqi/img/37.jpg">
 <meta property="article:published_time" content="2021-04-23T10:12:10.000Z">
-<meta property="article:modified_time" content="2021-05-07T11:30:36.573Z">
+<meta property="article:modified_time" content="2021-05-07T12:05:27.364Z">
 <meta property="article:author" content="chen">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/waterchen520/cdn@5.0/qiqi/img/37.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://czyhash.github.io/2021/04/23/spring/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="manifest" href="/img/pwa/manifest.json"/><link rel="apple-touch-icon" sizes="180x180" href="/img/pwa/apple-touch-icon.png"/><link rel="icon" type="image/png" sizes="32x32" href="/img/pwa/32.png"/><link rel="icon" type="image/png" sizes="16x16" href="/img/pwa/16.png"/><link rel="mask-icon" href="/img/pwa/safari-pinned-tab.svg" color="#5bbad5"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
@@ -56,7 +56,7 @@
   isHome: false,
   isHighlightShrink: true,
   isToc: true,
-  postUpdate: '2021-05-07 19:30:36'
+  postUpdate: '2021-05-07 20:05:27'
 }</script><noscript><style type="text/css">
   #nav {
     opacity: 1
@@ -139,43 +139,50 @@
         }
       }
     })(window)</script><meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="CHEN" type="application/atom+xml">
-</head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3199448612,855593598&amp;fm=26&amp;gp=0.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">2</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签页</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类页</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://cdn.jsdelivr.net/gh/waterchen520/cdn@5.0/qiqi/img/37.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">CHEN</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签页</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类页</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Spring笔记</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-04-23T10:12:10.000Z" title="发表于 2021-04-23 18:12:10">2021-04-23</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2021-05-07T11:30:36.573Z" title="更新于 2021-05-07 19:30:36">2021-05-07</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="Spring笔记"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p>欢迎来到【CHEN】，相关代码资源访问[github]。<a target="_blank" rel="noopener" href="https://github.com/czyhash/czyhash.github.io">https://github.com/czyhash/czyhash.github.io</a></p>
+</head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3199448612,855593598&amp;fm=26&amp;gp=0.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">2</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签页</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类页</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://cdn.jsdelivr.net/gh/waterchen520/cdn@5.0/qiqi/img/37.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">CHEN</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签页</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类页</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Spring笔记</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-04-23T10:12:10.000Z" title="发表于 2021-04-23 18:12:10">2021-04-23</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2021-05-07T12:05:27.364Z" title="更新于 2021-05-07 20:05:27">2021-05-07</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="Spring笔记"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p>欢迎来到【CHEN】，相关代码资源访问<code>github</code>。<a target="_blank" rel="noopener" href="https://github.com/czyhash/czyhash.github.io">https://github.com/czyhash/czyhash.github.io</a></p>
 <h2 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h2><p>spring全家桶：spring ， springmvc ，spring boot , spring cloud </p>
-<p>  spring: 出现是在2002左右，解决企业开发的难度。减轻对项目模块之间的管理，<br>          类和类之间的管理， 帮助开发人员创建对象，管理对象之间的关系。<br>             spring核心技术 ioc ， aop 。能实现模块之间，类之间的解耦合。</p>
-<p>  依赖：classa中使用classb的属性或者方法， 叫做classa依赖classb</p>
+<p>  <code>spring</code>: 出现是在2002左右，解决企业开发的难度。减轻对项目模块之间的管理，<br>          类和类之间的管理， 帮助开发人员创建对象，管理对象之间的关系。<br>             spring核心技术 ioc ， aop 。能实现模块之间，类之间的解耦合。</p>
+<p>  <code>依赖</code>：classa中使用classb的属性或者方法， 叫做classa依赖classb</p>
 <hr>
-<p>框架怎么学： 框架是一个软件，其它人写好的软件。<br> 1）知道框架能做什么， mybatis–访问数据库， 对表中的数据执行增删改查。<br> 2）框架的语法， 框架要完成一个功能，需要一定的步骤支持的，<br> 3）框架的内部实现， 框架内部怎么做。 原理是什么。<br> 4）通过学习，可以实现一个框架。</p>
+<p>框架怎么学： 框架是一个软件，其它人写好的软件。</p>
+<ol>
+<li>知道框架能做什么， mybatis–访问数据库， 对表中的数据执行增删改查。</li>
+<li>框架的语法， 框架要完成一个功能，需要一定的步骤支持的， </li>
+<li>框架的内部实现， 框架内部怎么做。 原理是什么。</li>
+<li>通过学习，可以实现一个框架。</li>
+</ol>
 <ol>
 <li>spring的第一个核心功能 ioc</li>
 </ol>
 <p>IoC (Inversion of Control) : 控制反转， 是一个理论，概念，思想。<br> 描述的：把对象的创建，赋值，管理工作都交给代码之外的容器实现， 也就是对象的创建是有其它外部资源完成。</p>
 <p>控制： 创建对象，对象的属性赋值，对象之间的关系管理。<br>反转： 把原来的开发人员管理，创建对象的权限转移给代码之外的容器实现。 由容器代替开发人员管理对象。创建对象，<br>        给属性赋值。</p>
-<p>正转：由开发人员在代码中，使用new 构造方法创建对象， 开发人员主动管理对象。<br>       public static void main(String args[]){<br>            Student student = new Student(); // 在代码中， 创建对象。–正转。</p>
-<pre><code>     &#125;
+<p>正转：由开发人员在代码中，使用new 构造方法创建对象， 开发人员主动管理对象。</p>
+<pre><code>     public static void main(String args[])&#123;
+            Student student = new Student(); // 在代码中， 创建对象。--正转。
+     &#125;
 </code></pre>
 <p>容器：是一个服务器软件， 一个框架（spring）</p>
 <p>为什么要使用 ioc ： 目的就是减少对代码的改动， 也能实现不同的功能。 实现解耦合。 </p>
 <p>java中创建对象有哪些方式：</p>
-<ol>
-<li>构造方法 ， new Student（）</li>
-<li>反射</li>
-<li>序列化</li>
-<li>克隆</li>
-<li>ioc ：容器创建对象</li>
-<li>动态代理</li>
-</ol>
+<pre><code>1. 构造方法 ， new Student（）
+2. 反射
+3. 序列化
+4. 克隆
+5. ioc ：容器创建对象
+6. 动态代理
+</code></pre>
 <p>ioc的体现：servlet </p>
 <ol>
 <li><p>创建类继承HttpServelt </p>
 <ol start="2">
-<li>在web.xml 注册servlet ， 使用<servlet-name> myservlet </servlet-name><pre><code>                                      &lt;servelt-class&gt;com.bjpwernode.controller.MyServlet1&lt;/servlet-class&gt;
+<li>在web.xml 注册servlet ， 使用&lt;servlet-name&gt; myservlet &lt;/servlet-name&gt;<pre><code>\&lt;servelt-class&gt;com.bjpwernode.controller.MyServlet1\&lt;/servlet-class&gt;
 </code></pre>
 </li>
 </ol>
 </li>
 <li><p>没有创建 Servlet对象， 没有 MyServlet myservlet = new MyServlet()</p>
 <ol start="4">
-<li>Servlet 是Tomcat服务器它能你创建的。 Tomcat也称为容器<pre><code>        Tomcat作为容器：里面存放的有Servlet对象， Listener ， Filter对象
+<li>Servlet 是Tomcat服务器它能你创建的。 Tomcat也称为容器<pre><code>   Tomcat作为容器：里面存放的有Servlet对象， Listener ， Filter对象
 </code></pre>
 </li>
 </ol>
@@ -190,34 +197,28 @@
 <p>  使用单元测试</p>
 <ol>
 <li><p>需要加入junit依赖。</p>
-<dependency>
-<groupId>junit</groupId>
-<artifactId>junit</artifactId>
-<version>4.11</version>
-<scope>test</scope>
-</dependency></li>
-<li><p>创建测试作用的类：叫做测试类<br>src/test/java目录中创建类</p>
-</li>
-<li><p>创建测试方法</p>
-</li>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">groupId</span>&gt;</span>junit<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>junit<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">version</span>&gt;</span>4.11<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">scope</span>&gt;</span>test<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
 </ol>
-<pre><code>1）public 方法
+<pre><code>2. 创建测试作用的类：叫做测试类
+
+src/test/java目录中创建类
+
+3. 创建测试方法
+
+1）public 方法
  2）没有返回值 void 
  3）方法名称自定义，建议名称是test + 你要测试方法名称
  4）方法没有参数
  5）方法的上面加入 @Test ,这样的方法是可以单独执行的。 不用使用main方法。
 </code></pre>
 <h3 id="第二章"><a href="#第二章" class="headerlink" title="第二章"></a>第二章</h3><ol>
-<li>多个配置优势</li>
-<li>每个文件的大小比一个文件要小很多。效率高</li>
-<li>避免多人竞争带来的冲突。</li>
+<li>多个配置优势<br>1.每个文件的大小比一个文件要小很多。效率高<br>  2.避免多人竞争带来的冲突。</li>
 </ol>
 <p>  如果你的项目有多个模块（相关的功能在一起） ，一个模块一个配置文件。<br>  学生考勤模块一个配置文件，  张三<br>  学生成绩一个配置文件，      李四</p>
 <p>  多文件的分配方式：</p>
-<ol>
-<li>按功能模块，一个模块一个配置文件</li>
-<li>按类的功能，数据库相关的配置一个文件配置文件， 做事务的功能一个配置文件， 做service功能的一个配置文件等</li>
-</ol>
+<pre><code>1. 按功能模块，一个模块一个配置文件
+2. 按类的功能，数据库相关的配置一个文件配置文件， 做事务的功能一个配置文件， 做service功能的一个配置文件等
+</code></pre>
 <ol start="2">
 <li><p>基于注解的di： 通过注解完成java对象创建，属性赋值。<br>使用注解的步骤：</p>
 <ol>
@@ -242,20 +243,20 @@
 </ol>
 <p>用户处理请求：<br>   用户form ,参数name ，age—–Servlet(接收请求name，age)—Service类（处理name，age操作）—dao类（访问数据库的）—mysql</p>
 <h3 id="第三章-aop"><a href="#第三章-aop" class="headerlink" title="第三章 aop"></a>第三章 aop</h3><ol>
-<li>动态代理<br>实现方式：jdk动态代理，使用jdk中的Proxy，Method，InvocaitonHanderl创建代理对象。<pre><code>      jdk动态代理要求目标类必须实现接口
+<li>动态代理<br>实现方式：jdk动态代理，使用jdk中的Proxy，Method，InvocaitonHanderl创建代理对象。<pre><code>    jdk动态代理要求目标类必须实现接口
 </code></pre>
 </li>
 </ol>
 <p>  cglib动态代理：第三方的工具库，创建代理对象，原理是继承。 通过继承目标类，创建子类。<br>             子类就是代理对象。 要求目标类不能是final的， 方法也不能是final的</p>
 <ol start="2">
-<li><p>动态代理的作用：<br>1）在目标类源代码不改变的情况下，增加功能。<br> 2）减少代码的重复<br> 3）专注业务逻辑代码<br> 4）解耦合，让你的业务功能和日志，事务非业务功能分离。</p>
+<li><p>动态代理的作用：<br>1）在目标类源代码不改变的情况下，增加功能。<br>2）减少代码的重复<br>3）专注业务逻辑代码<br>4）解耦合，让你的业务功能和日志，事务非业务功能分离。</p>
 </li>
-<li><p>Aop:面向切面编程， 基于动态代理的，可以使用jdk，cglib两种代理方式。<br>Aop就是动态代理的规范化， 把动态代理的实现步骤，方式都定义好了，<br>让开发人员用一种统一的方式，使用动态代理。</p>
+<li><p>Aop:面向切面编程， 基于动态代理的，可以使用jdk，cglib两种代理方式。<br>Aop就是动态代理的规范化， 把动态代理的实现步骤，方式都定义好了，<br>  让开发人员用一种统一的方式，使用动态代理。</p>
 </li>
 <li><p>AOP（Aspect Orient Programming）面向切面编程<br>Aspect: 切面，给你的目标类增加的功能，就是切面。 像上面用的日志，事务都是切面。</p>
-<pre><code>   切面的特点： 一般都是非业务方法，独立使用的。
+<pre><code> 切面的特点： 一般都是非业务方法，独立使用的。
 </code></pre>
-<p>Orient：面向， 对着。<br>Programming：编程</p>
+<p>  Orient：面向， 对着。<br>  Programming：编程</p>
 </li>
 </ol>
 <p>  oop: 面向对象编程</p>
@@ -269,20 +270,18 @@
 </code></pre>
 <ol start="5">
 <li>aop的实现<br>aop是一个规范，是动态的一个规范化，一个标准<br>aop的技术实现框架：<ol>
-<li>spring：spring在内部实现了aop规范，能做aop的工作。<pre><code>   spring主要在事务处理时使用aop。
-      我们项目开发中很少使用spring的aop实现。 因为spring的aop比较笨重。
+<li>spring：spring在内部实现了aop规范，能做aop的工作。<pre><code>spring主要在事务处理时使用aop。
+     我们项目开发中很少使用spring的aop实现。 因为spring的aop比较笨重。
 </code></pre>
 </li>
 </ol>
 </li>
 </ol>
-<ol start="2">
-<li>aspectJ: 一个开源的专门做aop的框架。spring框架中集成了aspectj框架，通过spring就能使用aspectj的功能。<br>aspectJ框架实现aop有两种方式：<ol>
-<li>使用xml的配置文件 ： 配置全局事务</li>
-<li>使用注解，我们在项目中要做aop功能，一般都使用注解， aspectj有5个注解。</li>
-</ol>
-</li>
-</ol>
+<pre><code>  2. aspectJ: 一个开源的专门做aop的框架。spring框架中集成了aspectj框架，通过spring就能使用aspectj的功能。
+     aspectJ框架实现aop有两种方式：
+           1. 使用xml的配置文件 ： 配置全局事务
+              2. 使用注解，我们在项目中要做aop功能，一般都使用注解， aspectj有5个注解。
+</code></pre>
 <ol start="6">
 <li>学习aspectj框架的使用。<br>1）切面的执行时间， 这个执行时间在规范中叫做Advice(通知，增强)<br>   在aspectj框架中使用注解表示的。也可以使用xml配置文件中的标签<pre><code>1）@Before
 2）@AfterReturning
@@ -318,24 +317,15 @@
 <p>我们会使用独立的连接池类替换mybatis默认自己带的， 把连接池类也交给spring创建。</p>
 <p>主配置文件：</p>
 <ol>
-<li>数据库信息<environment id="mydev">
-        <transactionManager type="JDBC"/>
-        <dataSource type="POOLED">
-            <!--数据库的驱动类名-->
-            <property name="driver" value="com.mysql.jdbc.Driver"/>
-            <!--连接数据库的url字符串-->
-            <property name="url" value="jdbc:mysql://localhost:3306/springdb"/>
-            <!--访问数据库的用户名-->
-            <property name="username" value="root"/>
-            <!--密码-->
-            <property name="password" value="123456"/>
-        </dataSource>
-        </li>
-<li>mapper文件的位置<mappers>
-     <mapper resource="com/bjpowernode/dao/StudentDao.xml"/>
-     <!--<mapper resource="com/bjpowernode/dao/SchoolDao.xml" />-->
- </mappers></li>
+<li><p>数据库信息</p>
+ <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">environment</span> <span class="attr">id</span>=<span class="string">&quot;mydev&quot;</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="name">transactionManager</span> <span class="attr">type</span>=<span class="string">&quot;JDBC&quot;</span>/&gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="name">dataSource</span> <span class="attr">type</span>=<span class="string">&quot;POOLED&quot;</span>&gt;</span></span><br><span class="line">           <span class="comment">&lt;!--数据库的驱动类名--&gt;</span></span><br><span class="line">           <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">&quot;driver&quot;</span> <span class="attr">value</span>=<span class="string">&quot;com.mysql.jdbc.Driver&quot;</span>/&gt;</span></span><br><span class="line">           <span class="comment">&lt;!--连接数据库的url字符串--&gt;</span></span><br><span class="line">           <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">&quot;url&quot;</span> <span class="attr">value</span>=<span class="string">&quot;jdbc:mysql://localhost:3306/springdb&quot;</span>/&gt;</span></span><br><span class="line">           <span class="comment">&lt;!--访问数据库的用户名--&gt;</span></span><br><span class="line">           <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">&quot;username&quot;</span> <span class="attr">value</span>=<span class="string">&quot;root&quot;</span>/&gt;</span></span><br><span class="line">           <span class="comment">&lt;!--密码--&gt;</span></span><br><span class="line">           <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">&quot;password&quot;</span> <span class="attr">value</span>=<span class="string">&quot;123456&quot;</span>/&gt;</span></span><br><span class="line">       <span class="tag">&lt;/<span class="name">dataSource</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+<li><p>mapper文件的位置</p>
+</li>
 </ol>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">mappers</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">mapper</span> <span class="attr">resource</span>=<span class="string">&quot;com/bjpowernode/dao/StudentDao.xml&quot;</span>/&gt;</span></span><br><span class="line">      <span class="comment">&lt;!--&lt;mapper resource=&quot;com/bjpowernode/dao/SchoolDao.xml&quot; /&gt;--&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">mappers</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
 <p>==============================================================<br>通过以上的说明，我们需要让spring创建以下对象</p>
 <ol>
 <li>独立的连接池类的对象， 使用阿里的druid连接池</li>
@@ -343,26 +333,30 @@
 <li>创建出dao对象</li>
 </ol>
 <p>需要学习就是上面三个对象的创建语法，使用xml的bean标签。</p>
-<p>连接池：多个连接Connection对象的集合， List<Connection>  connlist : connList就是连接池</p>
-<p>通常使用Connection访问数据库<br>Connection conn =DriverManger.getConnection(url,username,password);<br>Statemenet stmt = conn.createStatement(sql);<br>stmt.executeQuery();<br>conn.close();</p>
-<p>使用连接池<br>在程序启动的时候，先创建一些Connection<br>Connection c1 = …<br>Connection c2 = …<br>Connection c3 = …<br>List<Connection>  connlist = new ArrayLits();<br>connList.add(c1);<br>connList.add(c2);<br>connList.add(c3);</p>
-<p>Connection conn = connList.get(0);<br>Statemenet stmt = conn.createStatement(sql);<br>stmt.executeQuery();<br>把使用过的connection放回到连接池<br>connList.add(conn);</p>
-<p>Connection conn1 = connList.get(1);<br>Statemenet stmt = conn1.createStatement(sql);<br>stmt.executeQuery();<br>把使用过的connection放回到连接池<br>connList.add(conn1);</p>
-<h3 id="第五章-spring的事务处理"><a href="#第五章-spring的事务处理" class="headerlink" title="第五章  spring的事务处理"></a>第五章  spring的事务处理</h3><p><img src="https://github.com/czyhash/czyhash.github.io/blob/master/img/spring.jpg" alt="spring事务处理"><br>回答问题</p>
+<p>连接池：多个连接Connection对象的集合， List&lt;Connection&gt;  connlist : connList就是连接池</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">通常使用Connection访问数据库</span><br><span class="line">Connection conn =DriverManger.getConnection(url,username,password);</span><br><span class="line">Statemenet stmt = conn.createStatement(sql);</span><br><span class="line">stmt.executeQuery();</span><br><span class="line">conn.close();</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">使用连接池</span><br><span class="line">在程序启动的时候，先创建一些Connection</span><br><span class="line">Connection c1 = ...</span><br><span class="line">Connection c2 = ...</span><br><span class="line">Connection c3 = ...</span><br><span class="line">List\<span class="tag">&lt;<span class="name">Connection</span>&gt;</span>  connlist = new ArrayLits();</span><br><span class="line">connList.add(c1);</span><br><span class="line">connList.add(c2);</span><br><span class="line">connList.add(c3);</span><br><span class="line"></span><br><span class="line">Connection conn = connList.get(0);</span><br><span class="line">Statemenet stmt = conn.createStatement(sql);</span><br><span class="line">stmt.executeQuery();</span><br><span class="line">把使用过的connection放回到连接池</span><br><span class="line">connList.add(conn);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Connection conn1 = connList.get(1);</span><br><span class="line">Statemenet stmt = conn1.createStatement(sql);</span><br><span class="line">stmt.executeQuery();</span><br><span class="line">把使用过的connection放回到连接池</span><br><span class="line">connList.add(conn1);</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+<h3 id="第五章-spring的事务处理"><a href="#第五章-spring的事务处理" class="headerlink" title="第五章  spring的事务处理"></a>第五章  spring的事务处理</h3><p><img src="https://cdn.jsdelivr.net/gh/czyhash/cdn/spring.jpg" alt="spring事务处理"><br>回答问题</p>
 <ol>
-<li>什么是事务<br>讲mysql的时候，提出了事务。 事务是指一组sql语句的集合， 集合中有多条sql语句<br>可能是insert ， update ，select ，delete， 我们希望这些多个sql语句都能成功，<br>或者都失败， 这些sql语句的执行是一致的，作为一个整体执行。</li>
+<li>什么是事务<br>讲mysql的时候，提出了事务。 事务是指一组sql语句的集合， 集合中有多条sql语句<br>  可能是insert ， update ，select ，delete， 我们希望这些多个sql语句都能成功，<br>  或者都失败， 这些sql语句的执行是一致的，作为一个整体执行。</li>
 </ol>
 <ol start="2">
-<li>在什么时候想到使用事务<br>当我的操作，涉及得到多个表，或者是多个sql语句的insert，update，delete。需要保证<br>这些语句都是成功才能完成我的功能，或者都失败，保证操作是符合要求的。</li>
+<li>在什么时候想到使用事务<br>当我的操作，涉及得到多个表，或者是多个sql语句的insert，update，delete。需要保证<br>  这些语句都是成功才能完成我的功能，或者都失败，保证操作是符合要求的。</li>
 </ol>
 <p>  在java代码中写程序，控制事务，此时事务应该放在那里呢？<br>     service类的业务方法上，因为业务方法会调用多个dao方法，执行多个sql语句</p>
 <ol start="3">
-<li>通常使用JDBC访问数据库， 还是mybatis访问数据库怎么处理事务<br>jdbc访问数据库，处理事务  Connection conn ; conn.commit(); conn.rollback();<br> mybatis访问数据库，处理事务， SqlSession.commit();  SqlSession.rollback();<br> hibernate访问数据库，处理事务， Session.commit(); Session.rollback();</li>
+<li>通常使用JDBC访问数据库， 还是mybatis访问数据库怎么处理事务<br>jdbc访问数据库，处理事务  Connection conn ; conn.commit(); conn.rollback();<br>mybatis访问数据库，处理事务， SqlSession.commit();  SqlSession.rollback();<br>hibernate访问数据库，处理事务， Session.commit(); Session.rollback();</li>
 </ol>
 <ol start="4">
-<li>3问题中事务的处理方式，有什么不足</li>
+<li>3问题中事务的处理方式，有什么不足<br>1)不同的数据库访问技术，处理事务的对象，方法不同，<br>需要了解不同数据库访问技术使用事务的原理<br>  2)掌握多种数据库中事务的处理逻辑。什么时候提交事务，什么时候回顾事务<br>  3)处理事务的多种方法。</li>
 </ol>
-<p>  1)不同的数据库访问技术，处理事务的对象，方法不同，<br>    需要了解不同数据库访问技术使用事务的原理<br>  2)掌握多种数据库中事务的处理逻辑。什么时候提交事务，什么时候回顾事务<br>  3)处理事务的多种方法。</p>
 <p>  总结： 就是多种数据库的访问技术，有不同的事务处理的机制，对象，方法。</p>
 <ol start="5">
 <li>怎么解决不足<br>spring提供一种处理事务的统一模型， 能使用统一步骤，方式完成多种不同数据库访问技术的事务处理。</li>
@@ -373,9 +367,9 @@
 </ol>
 <p>  1）事务内部提交，回滚事务，使用的事务管理器对象，代替你完成commit，rollback<br>     事务管理器是一个接口和他的众多实现类。<br>      接口：PlatformTransactionManager ，定义了事务重要方法 commit ，rollback<br>      实现类：spring把每一种数据库访问技术对应的事务处理类都创建好了。<br>               mybatis访问数据库—spring创建好的是DataSourceTransactionManager<br>                  hibernate访问数据库—-spring创建的是HibernateTransactionManager</p>
 <pre><code> 怎么使用：你需要告诉spring 你用是那种数据库的访问技术，怎么告诉spring呢？
-  声明数据库访问技术对于的事务管理器实现类， 在spring的配置文件中使用&lt;bean&gt;声明就可以了
+  声明数据库访问技术对于的事务管理器实现类， 在spring的配置文件中使用\&lt;bean&gt;声明就可以了
   例如，你要使用mybatis访问数据库，你应该在xml配置文件中
-  &lt;bean id=“xxx&quot; class=&quot;...DataSourceTransactionManager&quot;&gt; 
+  <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">&quot;xxx&quot;</span> <span class="attr">class</span>=<span class="string">&quot;...DataSourceTransactionManager&quot;</span>&gt;</span> </span><br></pre></td></tr></table></figure>
 </code></pre>
 <p>  2）你的业务方法需要什么样的事务，说明需要事务的类型。<br>     说明方法需要的事务：<br>        1）事务的隔离级别：有4个值。<br>        DEFAULT：采用 DB 默认的事务隔离级别。MySql 的默认为 REPEATABLE_READ； Oracle默认为 READ_COMMITTED。<br>        ➢ READ_UNCOMMITTED：读未提交。未解决任何并发问题。<br>        ➢ READ_COMMITTED：读已提交。解决脏读，存在不可重复读与幻读。<br>        ➢ REPEATABLE_READ：可重复读。解决脏读、不可重复读，存在幻读<br>        ➢ SERIALIZABLE：串行化。不存在并发问题。</p>
 <pre><code>  2) 事务的超时时间： 表示一个方法最长的执行时间，如果方法执行时超过了时间，事务就回滚。
@@ -402,52 +396,59 @@
     受查异常：在你写代码中，必须处理的异常。例如IOException, SQLException
 </code></pre>
 <p>总结spring的事务</p>
-<ol>
-<li>管理事务的是 事务管理和他的实现类</li>
-<li>spring的事务是一个统一模型<br>1）指定要使用的事务管理器实现类，使用<bean><br> 2）指定哪些类，哪些方法需要加入事务的功能<br> 3）指定方法需要的隔离级别，传播行为，超时</li>
-</ol>
-<pre><code>  你需要告诉spring，你的项目中类信息，方法的名称，方法的事务传播行为。
+<pre><code>1. 管理事务的是 事务管理和他的实现类
+2. spring的事务是一个统一模型
+   1）指定要使用的事务管理器实现类，使用\&lt;bean&gt;
+     2）指定哪些类，哪些方法需要加入事务的功能
+     3）指定方法需要的隔离级别，传播行为，超时
+
+
+  你需要告诉spring，你的项目中类信息，方法的名称，方法的事务传播行为。
 </code></pre>
 <p>spring框架中提供的事务处理方案</p>
 <ol>
-<li>适合中小项目使用的， 注解方案。<br>spring框架自己用aop实现给业务方法增加事务的功能， 使用@Transactional注解增加事务。<br>@Transactional注解是spring框架自己注解，放在public方法的上面，表示当前方法具有事务。<br>可以给注解的属性赋值，表示具体的隔离级别，传播行为，异常信息等等</li>
+<li>适合中小项目使用的， 注解方案。<br>spring框架自己用aop实现给业务方法增加事务的功能， 使用@Transactional注解增加事务。<br>  @Transactional注解是spring框架自己注解，放在public方法的上面，表示当前方法具有事务。<br>  可以给注解的属性赋值，表示具体的隔离级别，传播行为，异常信息等等</li>
 </ol>
 <p>  使用@Transactional的步骤：</p>
-<ol>
-<li><p>需要声明事务管理器对象</p>
-<bean id="xx" class="DataSourceTransactionManager"></li>
-<li><p>开启事务注解驱动， 告诉spring框架，我要使用注解的方式管理事务。<br>spring使用aop机制，创建@Transactional所在的类代理对象，给方法加入事务的功能。<br>spring给业务方法加入事务：<br>   在你的业务方法执行之前，先开启事务，在业务方法之后提交或回滚事务，使用aop的环绕通知</p>
-<pre><code>@Around(&quot;你要增加的事务功能的业务方法名称&quot;)
-Object myAround()&#123;
-  开启事务，spring给你开启
-     try&#123;
-        buy(1001,10);
-         spring的事务管理器.commit();
-     &#125;catch(Exception e)&#123;
-    spring的事务管理器.rollback();
-     &#125;
-    
-&#125;
+<pre><code>1. 需要声明事务管理器对象
 </code></pre>
-</li>
-<li><p>在你的方法的上面加入@Trancational</p>
-</li>
-</ol>
+  <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">&quot;xx&quot;</span> <span class="attr">class</span>=<span class="string">&quot;DataSourceTransactionManager&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+<pre><code>2. 开启事务注解驱动， 告诉spring框架，我要使用注解的方式管理事务。
+
+spring使用aop机制，创建@Transactional所在的类代理对象，给方法加入事务的功能。
+spring给业务方法加入事务：
+    在你的业务方法执行之前，先开启事务，在业务方法之后提交或回滚事务，使用aop的环绕通知
+   
+     @Around(&quot;你要增加的事务功能的业务方法名称&quot;)
+     Object myAround()&#123;
+       开启事务，spring给你开启
+          try&#123;
+             buy(1001,10);
+              spring的事务管理器.commit();
+          &#125;catch(Exception e)&#123;
+         spring的事务管理器.rollback();
+          &#125;
+         
+     &#125;
+
+3. 在你的方法的上面加入@Trancational
+</code></pre>
 <ol start="2">
 <li>适合大型项目，有很多的类，方法，需要大量的配置事务，使用aspectj框架功能，在spring配置文件中<br>声明类，方法需要的事务。这种方式业务方法和事务配置完全分离。</li>
 </ol>
-<p>  实现步骤： 都是在xml配置文件中实现。<br>   1)要使用的是aspectj框架，需要加入依赖<br>    <dependency><br>        <groupId>org.springframework</groupId><br>        <artifactId>spring-aspects</artifactId><br>        <version>5.2.5.RELEASE</version><br>    </dependency></p>
+<p>  实现步骤： 都是在xml配置文件中实现。<br>   1)要使用的是aspectj框架，需要加入依赖<br>    <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">   <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-aspects<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">version</span>&gt;</span>5.2.5.RELEASE<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
 <pre><code>2）声明事务管理器对象
- 
-&lt;bean id=&quot;xx&quot; class=&quot;DataSourceTransactionManager&quot;&gt;
-
-
-3) 声明方法需要的事务类型（配置方法的事务属性【隔离级别，传播行为，超时】）
+ <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">&quot;xx&quot;</span> <span class="attr">class</span>=<span class="string">&quot;DataSourceTransactionManager&quot;</span>&gt;</span></span><br><span class="line">	</span><br></pre></td></tr></table></figure>
+</code></pre>
+<p>​    </p>
+<pre><code>3) 声明方法需要的事务类型（配置方法的事务属性【隔离级别，传播行为，超时】）
 
 4) 配置aop：指定哪些哪类要创建代理。
 </code></pre>
 <h3 id="第六章：-web项目中怎么使用容器对象。"><a href="#第六章：-web项目中怎么使用容器对象。" class="headerlink" title="第六章： web项目中怎么使用容器对象。"></a>第六章： web项目中怎么使用容器对象。</h3><ol>
-<li><p>做的是javase项目有main方法的，执行代码是执行main方法的，<br>在main里面创建的容器对象<br>ApplicationContext ctx = new ClassPathXmlApplicationContext(“applicationContext.xml”);</p>
+<li><p>做的是javase项目有main方法的，执行代码是执行main方法的，<br>在main里面创建的容器对象<br>  ApplicationContext ctx = new ClassPathXmlApplicationContext(“applicationContext.xml”);</p>
 </li>
 <li><p>web项目是在tomcat服务器上运行的。 tomcat一起动，项目一直运行的。</p>
 </li>
