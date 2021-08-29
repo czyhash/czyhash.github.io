@@ -1,4 +1,4 @@
-<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>const gitcalendar = new Vue({
+const gitcalendar = new Vue({
     el: '#gitcalendar',
     data: {
         simplemode: true, //打开时使用canvas绘制gitgitcalendar，关闭时使用svg绘制gitgitcalendar
