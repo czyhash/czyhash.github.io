@@ -1,0 +1,355 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Git笔记 | CHEN</title><meta name="author" content="chen"><meta name="copyright" content="chen"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="欢迎来到【CHEN】，相关代码资源访问[github]。https:&#x2F;&#x2F;github.com&#x2F;czyhash&#x2F;czyhash.github.io Git笔记什么是版本控制版本控制（Revision control）是一种在开发的过程中用于管理我们对文件、目录或工程等内容的修改历史，方便查看更改历史记录，备份以便恢复以前的版本的软件工程技术。实现跨区域多人协同开发追踪和记载一个或者多个文件的历史记录">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Git笔记">
+<meta property="og:url" content="https://czyhash.github.io/2021/08/31/Git%E7%AC%94%E8%AE%B0/index.html">
+<meta property="og:site_name" content="CHEN">
+<meta property="og:description" content="欢迎来到【CHEN】，相关代码资源访问[github]。https:&#x2F;&#x2F;github.com&#x2F;czyhash&#x2F;czyhash.github.io Git笔记什么是版本控制版本控制（Revision control）是一种在开发的过程中用于管理我们对文件、目录或工程等内容的修改历史，方便查看更改历史记录，备份以便恢复以前的版本的软件工程技术。实现跨区域多人协同开发追踪和记载一个或者多个文件的历史记录">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/waterchen520/cdn@5.0/qiqi/img/37.jpg">
+<meta property="article:published_time" content="2021-08-31T07:12:10.000Z">
+<meta property="article:modified_time" content="2021-08-30T14:23:17.677Z">
+<meta property="article:author" content="chen">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/waterchen520/cdn@5.0/qiqi/img/37.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://czyhash.github.io/2021/08/31/Git%E7%AC%94%E8%AE%B0/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="manifest" href="/img/pwa/manifest.json"/><link rel="apple-touch-icon" sizes="180x180" href="/img/pwa/apple-touch-icon.png"/><link rel="icon" type="image/png" sizes="32x32" href="/img/pwa/32.png"/><link rel="icon" type="image/png" sizes="16x16" href="/img/pwa/16.png"/><link rel="mask-icon" href="/img/pwa/safari-pinned-tab.svg" color="#5bbad5"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"簡"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#121212","position":"bottom-left"},
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: true,
+  islazyload: false,
+  isanchor: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: true,
+  isToc: true,
+  postUpdate: '2021-08-30 22:23:17'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><div class="aplayer" data-id="2693598459" data-server="netease" data-type="playlist" data-fixed="true" data-listFolded="false" data-order="random" data-preload="none"></div><link rel="stylesheet" href="https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.css"><script src="https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/meting@1.2.0/dist/Meting.min.js"></script><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    })(window)</script><link rel="stylesheet" href="/gitcalendar/css/gitcalendar.css"/><meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="CHEN" type="application/atom+xml">
+</head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3199448612,855593598&amp;fm=26&amp;gp=0.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">8</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签页</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类页</span></a></div><div class="menus_item"><a class="site-page" href="/bangumis/"><i class="fa-fw fas fa-video"></i><span> 追剧</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://cdn.jsdelivr.net/gh/waterchen520/cdn@5.0/qiqi/img/37.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">CHEN</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签页</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类页</span></a></div><div class="menus_item"><a class="site-page" href="/bangumis/"><i class="fa-fw fas fa-video"></i><span> 追剧</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Git笔记</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-08-31T07:12:10.000Z" title="发表于 2021-08-31 15:12:10">2021-08-31</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2021-08-30T14:23:17.677Z" title="更新于 2021-08-30 22:23:17">2021-08-30</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="Git笔记"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p>欢迎来到【CHEN】，相关代码资源访问[github]。<a target="_blank" rel="noopener" href="https://github.com/czyhash/czyhash.github.io">https://github.com/czyhash/czyhash.github.io</a></p>
+<h3 id="Git笔记"><a href="#Git笔记" class="headerlink" title="Git笔记"></a>Git笔记</h3><h1 id="什么是版本控制"><a href="#什么是版本控制" class="headerlink" title="什么是版本控制"></a>什么是版本控制</h1><p>版本控制（Revision control）是一种在开发的过程中用于管理我们对文件、目录或工程等内容的修改历史，方便查看更改历史记录，备份以便恢复以前的版本的软件工程技术。<br>实现跨区域多人协同开发<br>追踪和记载一个或者多个文件的历史记录<br>组织和保护你的源代码和文档<br>统计工作量<br>并行开发、提高开发效率<br>跟踪记录整个软件的开发过程<br>减轻开发人员的负担，节省时间，同时降低人为错误<br>简单说就是用于管理多人协同开发项目的技术。<br>没有进行版本控制或者版本控制本身缺乏正确的流程管理，在软件开发过程中将会引入很多问题，如软件代码的一致性、软件内容的冗余、软件过程的事物性、软件开发过程中的并发性、软件源代码的安全性，以及软件的整合等问题。<br>无论是工作还是学习，或者是自己做笔记，都经历过这样一个阶段！我们就迫切需要一个版本控制工具！</p>
+<p><img src="https://cdn.jsdelivr.net/gh/czyhash/cdn/git.jpg" alt="Git"></p>
+<p>多人开发就必须要使用版本控制！</p>
+<h1 id="常见的版本控制工具"><a href="#常见的版本控制工具" class="headerlink" title="常见的版本控制工具"></a>常见的版本控制工具</h1><p>我们学习的东西，一定是当下最流行的！</p>
+<p>主流的版本控制器有如下这些：</p>
+<p>**</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">Git**</span><br><span class="line"></span><br><span class="line">**SVN**（Subversion）</span><br><span class="line"></span><br><span class="line">**CVS**（Concurrent Versions System）</span><br><span class="line"></span><br><span class="line">**VSS**（Micorosoft Visual SourceSafe）</span><br><span class="line"></span><br><span class="line">**TFS**（Team Foundation Server）</span><br><span class="line"></span><br><span class="line">Visual Studio Online</span><br></pre></td></tr></table></figure>
+
+<p>版本控制产品非常的多（Perforce、Rational ClearCase、RCS（GNU Revision Control System）、Serena Dimention、SVK、BitKeeper、Monotone、Bazaar、Mercurial、SourceGear Vault），现在影响力最大且使用最广泛的是Git与SVN</p>
+<h3 id="版本控制分类"><a href="#版本控制分类" class="headerlink" title="版本控制分类"></a>版本控制分类</h3><p><strong>1****、本地版本控制</strong></p>
+<p>记录文件每次的更新，可以对每个版本做一个快照，或是记录补丁文件，适合个人用，如RCS。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/czyhash/cdn/git1.png" alt="Git"></p>
+<p><strong>2****、集中版本控制  SVN</strong></p>
+<p>所有的版本数据都保存在服务器上，协同开发者从服务器上同步更新或上传自己的修改</p>
+<p><img src="https://cdn.jsdelivr.net/gh/czyhash/cdn/git2.png" alt="Git"></p>
+<p>所有的版本数据都存在服务器上，用户的本地只有自己以前所同步的版本，如果不连网的话，用户就看不到历史版本，也无法切换版本验证问题，或在不同分支工作。而且，所有数据都保存在单一的服务器上，有很大的风险这个服务器会损坏，这样就会丢失所有的数据，当然可以定期备份。代表产品：SVN、CVS、VSS</p>
+<p><strong>3****、分布式版本控制</strong>   <strong>Git</strong></p>
+<p>每个人都拥有全部的代码！安全隐患！</p>
+<p>所有版本信息仓库全部同步到本地的每个用户，这样就可以在本地查看所有版本历史，可以离线在本地提交，只需在连网时push到相应的服务器或其他用户那里。由于每个用户那里保存的都是所有的版本数据，只要有一个用户的设备没有问题就可以恢复所有的数据，但这增加了本地存储空间的占用。</p>
+<p>不会因为服务器损坏或者网络问题，造成不能工作的情况！</p>
+<p><img src="https://cdn.jsdelivr.net/gh/czyhash/cdn/git3.jpg" alt="Git"></p>
+<h1 id="Git与SVN的主要区别"><a href="#Git与SVN的主要区别" class="headerlink" title="Git与SVN的主要区别"></a>Git与SVN的主要区别</h1><p>SVN是集中式版本控制系统，版本库是集中放在中央服务器的，而工作的时候，用的都是自己的电脑，所以首先要从中央服务器得到最新的版本，然后工作，完成工作后，需要把自己做完的活推送到中央服务器。集中式版本控制系统是必须联网才能工作，对网络带宽要求较高。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/czyhash/cdn/git4.jpg" alt="Git"><br>Git是分布式版本控制系统，没有中央服务器，每个人的电脑就是一个完整的版本库，工作的时候不需要联网了，因为版本都在自己电脑上。协同的方法是这样的：比如说自己在电脑上改了文件A，其他人也在电脑上改了文件A，这时，你们两之间只需把各自的修改推送给对方，就可以互相看到对方的修改了。Git可以直接看到更新了哪些代码和文件！</p>
+<p><strong>Git****是目前世界上最先进的分布式版本控制系统。</strong></p>
+<h1 id="聊聊Git的历史"><a href="#聊聊Git的历史" class="headerlink" title="聊聊Git的历史"></a>聊聊Git的历史</h1><p>同生活中的许多伟大事物一样，Git 诞生于一个极富纷争大举创新的年代。</p>
+<p>Linux 内核开源项目有着为数众广的参与者。绝大多数的 Linux 内核维护工作都花在了提交补丁和保存归档的繁琐事务上(1991－2002年间)。到 2002 年，整个项目组开始启用一个专有的分布式版本控制系统 BitKeeper 来管理和维护代码。</p>
+<p>Linux社区中存在很多的大佬！破解研究 BitKeeper ！</p>
+<p>到了 2005 年，开发 BitKeeper 的商业公司同 Linux 内核开源社区的合作关系结束，他们收回了 Linux 内核社区免费使用 BitKeeper 的权力。这就迫使 Linux 开源社区(特别是 Linux 的缔造者 Linus Torvalds)基于使用 BitKeeper 时的经验教训，开发出自己的版本系统。（2周左右！） 也就是后来的 Git！</p>
+<p><strong>Git****是目前世界上最先进的分布式版本控制系统。</strong></p>
+<p>Git是免费、开源的，最初Git是为辅助 Linux 内核开发的，来替代 BitKeeper！</p>
+<p><img src="https://cdn.jsdelivr.net/gh/czyhash/cdn/git5.jpg" alt="Git"></p>
+<p>Linux和Git之父李纳斯·托沃兹（Linus Benedic Torvalds）1969、芬兰</p>
+<h3 id="Git环境配置"><a href="#Git环境配置" class="headerlink" title="Git环境配置"></a>Git环境配置</h3><h1 id="软件下载"><a href="#软件下载" class="headerlink" title="软件下载"></a>软件下载</h1><p>打开 [git官网] <a target="_blank" rel="noopener" href="https://git-scm.com/%EF%BC%8C%E4%B8%8B%E8%BD%BDgit%E5%AF%B9%E5%BA%94%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9A%84%E7%89%88%E6%9C%AC%E3%80%82">https://git-scm.com/，下载git对应操作系统的版本。</a></p>
+<p>所有东西下载慢的话就可以去找镜像！</p>
+<p>官网下载太慢，我们可以使用淘宝镜像下载：<a target="_blank" rel="noopener" href="http://npm.taobao.org/mirrors/git-for-windows/">http://npm.taobao.org/mirrors/git-for-windows/</a></p>
+<p><img src="https://cdn.jsdelivr.net/gh/czyhash/cdn/git6.jpg" alt="Git"></p>
+<p>下载对应的版本即可安装！</p>
+<p>安装：无脑下一步即可！安装完毕就可以使用了！</p>
+<h1 id="启动Git"><a href="#启动Git" class="headerlink" title="启动Git"></a>启动Git</h1><p>安装成功后在开始菜单中会有Git项，菜单下有3个程序：任意文件夹下右键也可以看到对应的程序！</p>
+<p><img src="https://cdn.jsdelivr.net/gh/czyhash/cdn/git7.png" alt="Git"><br>**</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Git Bash****：**Unix与Linux风格的命令行，使用最多，推荐最多</span><br><span class="line"></span><br><span class="line">**Git CMD****：**Windows风格的命令行</span><br><span class="line"></span><br><span class="line">**Git GUI**：图形界面的Git，不建议初学者使用，尽量先熟悉常用命令</span><br></pre></td></tr></table></figure>
+
+<h3 id="常用的Linux命令"><a href="#常用的Linux命令" class="headerlink" title="常用的Linux命令"></a>常用的Linux命令</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">平时一定要多使用这些基础的命令！</span><br><span class="line"></span><br><span class="line">1）、cd : 改变目录。</span><br><span class="line"></span><br><span class="line">2）、cd . . 回退到上一个目录，直接cd进入默认目录</span><br><span class="line"></span><br><span class="line">3）、pwd : 显示当前所在的目录路径。</span><br><span class="line"></span><br><span class="line">4）、ls(ll):  都是列出当前目录中的所有文件，只不过ll(两个ll)列出的内容更为详细。</span><br><span class="line"></span><br><span class="line">5）、touch : 新建一个文件 如 touch index.js 就会在当前目录下新建一个index.js文件。</span><br><span class="line"></span><br><span class="line">6）、rm:  删除一个文件, rm index.js 就会把index.js文件删除。</span><br><span class="line"></span><br><span class="line">7）、mkdir:  新建一个目录,就是新建一个文件夹。</span><br><span class="line"></span><br><span class="line">8）、rm -r :  删除一个文件夹, rm -r src 删除src目录</span><br><span class="line"></span><br><span class="line">rm -rf &#x2F; 切勿在Linux中尝试！删除电脑中全部文件！</span><br><span class="line"></span><br><span class="line">9）、mv 移动文件, mv index.html src index.html 是我们要移动的文件, src 是目标文件夹,当然, 这样写,必须保证文件和目标文件夹在同一目录下。</span><br><span class="line"></span><br><span class="line">10）、reset 重新初始化终端&#x2F;清屏。</span><br><span class="line"></span><br><span class="line">11）、clear 清屏。</span><br><span class="line"></span><br><span class="line">12）、history 查看命令历史。</span><br><span class="line"></span><br><span class="line">13）、help 帮助。</span><br><span class="line"></span><br><span class="line">14）、exit 退出。</span><br><span class="line"></span><br><span class="line">15）、#表示注释</span><br></pre></td></tr></table></figure>
+
+<h3 id="Git配置"><a href="#Git配置" class="headerlink" title="Git配置"></a>Git配置</h3><p>所有的配置文件，其实都保存在本地！</p>
+<p>查看配置 git config -l</p>
+<p><img src="https://cdn.jsdelivr.net/gh/czyhash/cdn/git8.jpg" alt="Git"></p>
+<p>查看不同级别的配置文件：</p>
+<p>#查看系统configgit config –system –list　　#查看当前用户（global）配置git config –global –list</p>
+<p><strong>Git****相关的配置文件：</strong></p>
+<p>1）、Git\etc\gitconfig  ：Git 安装目录下的 gitconfig   –system 系统级</p>
+<p>2）、C:\Users\Administrator\ .gitconfig   只适用于当前登录用户的配置  –global 全局</p>
+<p>这里可以直接编辑配置文件，通过命令设置后会响应到这里。</p>
+<h1 id="设置用户名与邮箱（用户标识，必要）"><a href="#设置用户名与邮箱（用户标识，必要）" class="headerlink" title="设置用户名与邮箱（用户标识，必要）"></a>设置用户名与邮箱（用户标识，必要）</h1><p>当你安装Git后首先要做的事情是设置你的用户名称和e-mail地址。这是非常重要的，因为每次Git提交都会使用该信息。它被永远的嵌入到了你的提交中：</p>
+<p>git config –global user.name “chen” #名称git config –global user.email <a href="mailto:&#50;&#x30;&#x31;&#x37;&#55;&#x32;&#49;&#x30;&#x32;&#x35;&#64;&#x71;&#x71;&#46;&#99;&#111;&#x6d;">&#50;&#x30;&#x31;&#x37;&#55;&#x32;&#49;&#x30;&#x32;&#x35;&#64;&#x71;&#x71;&#46;&#99;&#111;&#x6d;</a>  #邮箱</p>
+<p>只需要做一次这个设置，如果你传递了–global 选项，因为Git将总是会使用该信息来处理你在系统中所做的一切操作。如果你希望在一个特定的项目中使用不同的名称或e-mail地址，你可以在该项目中运行该命令而不要–global选项。总之–global为全局配置，不加为某个项目的特定配置。</p>
+<h3 id="Git基本理论（重要）"><a href="#Git基本理论（重要）" class="headerlink" title="Git基本理论（重要）"></a>Git基本理论（重要）</h3><h1 id="三个区域"><a href="#三个区域" class="headerlink" title="三个区域"></a>三个区域</h1><p>Git本地有三个工作区域：工作目录（Working Directory）、暂存区(Stage/Index)、资源库(Repository或Git Directory)。如果在加上远程的git仓库(Remote Directory)就可以分为四个工作区域。文件在这四个区域之间的转换关系如下：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/czyhash/cdn/git9.png" alt="Git"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Workspace：工作区，就是你平时存放项目代码的地方</span><br><span class="line"></span><br><span class="line">Index &#x2F; Stage：暂存区，用于临时存放你的改动，事实上它只是一个文件，保存即将提交到文件列表信息</span><br><span class="line"></span><br><span class="line">Repository：仓库区（或本地仓库），就是安全存放数据的位置，这里面有你提交到所有版本的数据。其中HEAD指向最新放入仓库的版本</span><br><span class="line"></span><br><span class="line">Remote：远程仓库，托管代码的服务器，可以简单的认为是你项目组中的一台电脑用于远程数据交换</span><br></pre></td></tr></table></figure>
+
+<p>本地的三个区域确切的说应该是git仓库中HEAD指向的版本：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/czyhash/cdn/git10.png" alt="Git"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">Directory：使用Git管理的一个目录，也就是一个仓库，包含我们的工作空间和Git的管理空间。</span><br><span class="line"></span><br><span class="line">WorkSpace：需要通过Git进行版本控制的目录和文件，这些目录和文件组成了工作空间。</span><br><span class="line"></span><br><span class="line">.git：存放Git管理信息的目录，初始化仓库的时候自动创建。</span><br><span class="line"></span><br><span class="line">Index&#x2F;Stage：暂存区，或者叫待提交更新区，在提交进入repo之前，我们可以把所有的更新放在暂存区。</span><br><span class="line"></span><br><span class="line">Local Repo：本地仓库，一个存放在本地的版本库；HEAD会只是当前的开发分支（branch）。</span><br><span class="line"></span><br><span class="line">Stash：隐藏，是一个工作状态保存栈，用于保存&#x2F;恢复WorkSpace中的临时状态。</span><br></pre></td></tr></table></figure>
+
+<h3 id="工作流程"><a href="#工作流程" class="headerlink" title="工作流程"></a>工作流程</h3><p>git的工作流程一般是这样的：</p>
+<p>１、在工作目录中添加、修改文件；</p>
+<p>２、将需要进行版本管理的文件放入暂存区域；</p>
+<p>３、将暂存区域的文件提交到git仓库。</p>
+<p>因此，git管理的文件有三种状态：已修改（modified）,已暂存（staged）,已提交(committed)</p>
+<p><img src="https://cdn.jsdelivr.net/gh/czyhash/cdn/git11.jpg" alt="Git"></p>
+<h3 id="Git项目搭建"><a href="#Git项目搭建" class="headerlink" title="Git项目搭建"></a>Git项目搭建</h3><h1 id="创建工作目录与常用指令"><a href="#创建工作目录与常用指令" class="headerlink" title="创建工作目录与常用指令"></a>创建工作目录与常用指令</h1><p>工作目录（WorkSpace)一般就是你希望Git帮助你管理的文件夹，可以是你项目的目录，也可以是一个空目录，建议不要有中文。</p>
+<p>日常使用只要记住下图6个命令：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/czyhash/cdn/git12.png" alt="Git"></p>
+<h1 id="本地仓库搭建"><a href="#本地仓库搭建" class="headerlink" title="本地仓库搭建"></a>本地仓库搭建</h1><p>创建本地仓库的方法有两种：一种是创建全新的仓库，另一种是克隆远程仓库。</p>
+<p>1、创建全新的仓库，需要用GIT管理的项目的根目录执行：</p>
+<p># 在当前目录新建一个Git代码库$ git init</p>
+<p>2、执行后可以看到，仅仅在项目目录多出了一个.git目录，关于版本等的所有信息都在这个目录里面。</p>
+<h1 id="克隆远程仓库"><a href="#克隆远程仓库" class="headerlink" title="克隆远程仓库"></a>克隆远程仓库</h1><p>1、另一种方式是克隆远程目录，由于是将远程服务器上的仓库完全镜像一份至本地！</p>
+<p># 克隆一个项目和它的整个代码历史(版本信息)$ git clone [url] # <a target="_blank" rel="noopener" href="https://gitee.com/chen-zhiyong-0/gitstudy">https://gitee.com/chen-zhiyong-0/gitstudy</a></p>
+<p>2、去 gitee 或者 github 上克隆一个测试！</p>
+<h3 id="Git文件操作"><a href="#Git文件操作" class="headerlink" title="Git文件操作"></a>Git文件操作</h3><h1 id="文件的四种状态"><a href="#文件的四种状态" class="headerlink" title="文件的四种状态"></a>文件的四种状态</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">版本控制就是对文件的版本控制，要对文件进行修改、提交等操作，首先要知道文件当前在什么状态，不然可能会提交了现在还不想提交的文件，或者要提交的文件没提交上。</span><br><span class="line"></span><br><span class="line">Untracked: 未跟踪, 此文件在文件夹中, 但并没有加入到git库, 不参与版本控制. 通过git add 状态变为Staged.</span><br><span class="line"></span><br><span class="line">Unmodify: 文件已经入库, 未修改, 即版本库中的文件快照内容与文件夹中完全一致. 这种类型的文件有两种去处, 如果它被修改, 而变为Modified. 如果使用git rm移出版本库, 则成为Untracked文件</span><br><span class="line"></span><br><span class="line">Modified: 文件已修改, 仅仅是修改, 并没有进行其他的操作. 这个文件也有两个去处, 通过git add可进入暂存staged状态, 使用git checkout 则丢弃修改过, 返回到unmodify状态, 这个git checkout即从库中取出文件, 覆盖当前修改 !</span><br><span class="line"></span><br><span class="line">Staged: 暂存状态. 执行git commit则将修改同步到库中, 这时库中的文件和本地文件又变为一致, 文件为Unmodify状态. 执行git reset HEAD filename取消暂存, 文件状态为Modified</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="查看文件状态"><a href="#查看文件状态" class="headerlink" title="查看文件状态"></a>查看文件状态</h1><p>上面说文件有4种状态，通过如下命令可以查看到文件的状态：</p>
+<p>#查看指定文件状态git status [filename]</p>
+<p>#查看所有文件状态git status</p>
+<p># git add .         添加所有文件到暂存区# git commit -m “消息内容”  提交暂存区中的内容到本地仓库 -m 提交信息</p>
+<h1 id="忽略文件"><a href="#忽略文件" class="headerlink" title="忽略文件"></a>忽略文件</h1><p>有些时候我们不想把某些文件纳入版本控制中，比如数据库文件，临时文件，设计文件等</p>
+<p>在主目录下建立”.gitignore”文件，此文件有如下规则：</p>
+<p>忽略文件中的空行或以井号（#）开始的行将会被忽略。</p>
+<p>可以使用Linux通配符。例如：星号（*）代表任意多个字符，问号（？）代表一个字符，方括号（[abc]）代表可选字符范围，大括号（{string1,string2,…}）代表可选的字符串等。</p>
+<p>如果名称的最前面有一个感叹号（!），表示例外规则，将不被忽略。</p>
+<p>如果名称的最前面是一个路径分隔符（/），表示要忽略的文件在此目录下，而子目录中的文件不忽略。</p>
+<p>如果名称的最后面是一个路径分隔符（/），表示要忽略的是此目录下该名称的子目录，而非文件（默认文件或目录都忽略）。</p>
+<p>#为注释*.txt    #忽略所有 .txt结尾的文件,这样的话上传就不会被选中！!lib.txt   #但lib.txt除外/temp    #仅忽略项目根目录下的TODO文件,不包括其它目录tempbuild/    #忽略build/目录下的所有文件doc/*.txt  #会忽略 doc/notes.txt 但不包括 doc/server/arch.txt</p>
+<h3 id="使用码云"><a href="#使用码云" class="headerlink" title="使用码云"></a>使用码云</h3><h2 id="github-是有墙的，比较慢，在国内的话，我们一般使用-gitee-，公司中有时候会搭建自己的gitlab服务器"><a href="#github-是有墙的，比较慢，在国内的话，我们一般使用-gitee-，公司中有时候会搭建自己的gitlab服务器" class="headerlink" title="github 是有墙的，比较慢，在国内的话，我们一般使用 gitee ，公司中有时候会搭建自己的gitlab服务器"></a>github 是有墙的，比较慢，在国内的话，我们一般使用 gitee ，公司中有时候会搭建自己的gitlab服务器</h2><p>这个其实可以作为大家未来找工作的一个重要信息！</p>
+<p>1、注册登录码云，完善个人信息</p>
+<p>2、 <img src="https://cdn.jsdelivr.net/gh/czyhash/cdn/git13.jpg" alt="Git"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/czyhash/cdn/git14.png" alt="Git"></p>
+<p>2、设置本机绑定SSH公钥，实现免密码登录！（免密码登录，这一步挺重要的，码云是远程仓库，我们是平时工作在本地仓库！)</p>
+<p># 进入 C:\Users\Administrator.ssh 目录# 生成公钥ssh-keygen</p>
+<p><img src="https://cdn.jsdelivr.net/gh/czyhash/cdn/git15.jpg" alt="Git"></p>
+<p>3、将公钥信息public key 添加到码云账户中即可！</p>
+<p><img src="https://cdn.jsdelivr.net/gh/czyhash/cdn/git16.png" alt="Git"><br>4、使用码云创建一个自己的仓库！</p>
+<p><img src="https://cdn.jsdelivr.net/gh/czyhash/cdn/git17.png" alt="Git"></p>
+<p>许可证：开源是否可以随意转载，开源但是不能商业使用，不能转载，…  限制！</p>
+<p><img src="https://cdn.jsdelivr.net/gh/czyhash/cdn/git18.jpg" alt="Git"></p>
+<p>克隆到本地！<br><img src="https://cdn.jsdelivr.net/gh/czyhash/cdn/git19.jpg" alt="Git"></p>
+<h3 id="IDEA中集成Git"><a href="#IDEA中集成Git" class="headerlink" title="IDEA中集成Git"></a>IDEA中集成Git</h3><p>1、新建项目，绑定git。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/czyhash/cdn/git20.jpg" alt="Git"></p>
+<p>注意观察idea中的变化</p>
+<p><img src="https://cdn.jsdelivr.net/gh/czyhash/cdn/git21.png" alt="Git"></p>
+<p>2、修改文件，使用IDEA操作git。</p>
+<p>添加到暂存区</p>
+<p>commit 提交</p>
+<p>push到远程仓库</p>
+<p>3、提交测试</p>
+<p><img src="https://cdn.jsdelivr.net/gh/czyhash/cdn/git22.png" alt="Git"><br>这些都是单个人的操作！</p>
+<p>学习的方式最重要！学会学习！我上课的更多时候都是在教大家去学习一种理念和思想（学习方式）</p>
+<p>有道无术、术尚可求。有术无道、止于术！</p>
+<p>真正的教学，授人以渔！</p>
+<h1 id="说明：GIT分支"><a href="#说明：GIT分支" class="headerlink" title="说明：GIT分支"></a>说明：GIT分支</h1><p>分支在GIT中相对较难，分支就是科幻电影里面的平行宇宙，如果两个平行宇宙互不干扰，那对现在的你也没啥影响。不过，在某个时间点，两个平行宇宙合并了，我们就需要处理一些问题了！</p>
+<p><img src="https://cdn.jsdelivr.net/gh/czyhash/cdn/git23.png" alt="Git"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/czyhash/cdn/git24.png" alt="Git"></p>
+<p>git分支中常用指令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"># 列出所有本地分支git branch</span><br><span class="line"></span><br><span class="line">\# 列出所有远程分支git branch -r</span><br><span class="line"></span><br><span class="line">\# 新建一个分支，但依然停留在当前分支git branch [branch-name]</span><br><span class="line"></span><br><span class="line">\# 新建一个分支，并切换到该分支git checkout -b [branch]</span><br><span class="line"></span><br><span class="line">\# 合并指定分支到当前分支$ git merge [branch]</span><br><span class="line"></span><br><span class="line">\# 删除分支$ git branch -d [branch-name]</span><br><span class="line"></span><br><span class="line">\# 删除远程分支$ git push origin --delete [branch-name]$ git branch -dr [remote&#x2F;branch]</span><br></pre></td></tr></table></figure>
+
+<h1 id="IDEA中操作"><a href="#IDEA中操作" class="headerlink" title="IDEA中操作"></a>IDEA中操作</h1><p><img src="https://cdn.jsdelivr.net/gh/czyhash/cdn/git25.png" alt="Git"></p>
+<p>如果同一个文件在合并分支时都被修改了则会引起冲突：解决的办法是我们可以修改冲突文件后重新提交！选择要保留他的代码还是你的代码！</p>
+<p>master主分支应该非常稳定，用来发布新版本，一般情况下不允许在上面工作，工作一般情况下在新建的dev分支上工作，工作完后，比如上要发布，或者说dev分支代码稳定后可以合并到主分支master上来。</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">chen</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://czyhash.github.io/2021/08/31/Git%E7%AC%94%E8%AE%B0/">https://czyhash.github.io/2021/08/31/Git%E7%AC%94%E8%AE%B0/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://czyhash.github.io" target="_blank">CHEN</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="https://cdn.jsdelivr.net/gh/waterchen520/cdn@5.0/qiqi/img/37.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-full"><a href="/2021/08/30/Linux03%EF%BC%9AVim%E4%BD%BF%E7%94%A8%E5%8F%8A%E8%B4%A6%E5%8F%B7%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86Vim%E7%BC%96%E8%BE%91%E5%99%A8/"><img class="prev-cover" src="https://cdn.jsdelivr.net/gh/waterchen520/cdn@5.0/qiqi/img/37.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">Linux03：Vim使用及账号用户管理Vim编辑器</div></div></a></div></nav><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div><div id="comment-switch"><span class="first-comment">Valine</span><span class="switch-btn"></span><span class="second-comment">Disqus</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div><div><div id="disqus_thread"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-info-avatar is-center"><img class="avatar-img" src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3199448612,855593598&amp;fm=26&amp;gp=0.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">chen</div><div class="author-info__description"></div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">8</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly"><i class="fab fa-github"></i><span>Github</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/czyhash" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="/2017721025@qq.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Git%E7%AC%94%E8%AE%B0"><span class="toc-number">1.</span> <span class="toc-text">Git笔记</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6"><span class="toc-number"></span> <span class="toc-text">什么是版本控制</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%B8%B8%E8%A7%81%E7%9A%84%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6%E5%B7%A5%E5%85%B7"><span class="toc-number"></span> <span class="toc-text">常见的版本控制工具</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6%E5%88%86%E7%B1%BB"><span class="toc-number">1.</span> <span class="toc-text">版本控制分类</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Git%E4%B8%8ESVN%E7%9A%84%E4%B8%BB%E8%A6%81%E5%8C%BA%E5%88%AB"><span class="toc-number"></span> <span class="toc-text">Git与SVN的主要区别</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%81%8A%E8%81%8AGit%E7%9A%84%E5%8E%86%E5%8F%B2"><span class="toc-number"></span> <span class="toc-text">聊聊Git的历史</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Git%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE"><span class="toc-number">1.</span> <span class="toc-text">Git环境配置</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%BD%AF%E4%BB%B6%E4%B8%8B%E8%BD%BD"><span class="toc-number"></span> <span class="toc-text">软件下载</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%90%AF%E5%8A%A8Git"><span class="toc-number"></span> <span class="toc-text">启动Git</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E7%9A%84Linux%E5%91%BD%E4%BB%A4"><span class="toc-number">1.</span> <span class="toc-text">常用的Linux命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Git%E9%85%8D%E7%BD%AE"><span class="toc-number">2.</span> <span class="toc-text">Git配置</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%AE%BE%E7%BD%AE%E7%94%A8%E6%88%B7%E5%90%8D%E4%B8%8E%E9%82%AE%E7%AE%B1%EF%BC%88%E7%94%A8%E6%88%B7%E6%A0%87%E8%AF%86%EF%BC%8C%E5%BF%85%E8%A6%81%EF%BC%89"><span class="toc-number"></span> <span class="toc-text">设置用户名与邮箱（用户标识，必要）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Git%E5%9F%BA%E6%9C%AC%E7%90%86%E8%AE%BA%EF%BC%88%E9%87%8D%E8%A6%81%EF%BC%89"><span class="toc-number">1.</span> <span class="toc-text">Git基本理论（重要）</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%89%E4%B8%AA%E5%8C%BA%E5%9F%9F"><span class="toc-number"></span> <span class="toc-text">三个区域</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B"><span class="toc-number">1.</span> <span class="toc-text">工作流程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Git%E9%A1%B9%E7%9B%AE%E6%90%AD%E5%BB%BA"><span class="toc-number">2.</span> <span class="toc-text">Git项目搭建</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E5%B7%A5%E4%BD%9C%E7%9B%AE%E5%BD%95%E4%B8%8E%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4"><span class="toc-number"></span> <span class="toc-text">创建工作目录与常用指令</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93%E6%90%AD%E5%BB%BA"><span class="toc-number"></span> <span class="toc-text">本地仓库搭建</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%8B%E9%9A%86%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93"><span class="toc-number"></span> <span class="toc-text">克隆远程仓库</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Git%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C"><span class="toc-number">1.</span> <span class="toc-text">Git文件操作</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E7%9A%84%E5%9B%9B%E7%A7%8D%E7%8A%B6%E6%80%81"><span class="toc-number"></span> <span class="toc-text">文件的四种状态</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B%E6%96%87%E4%BB%B6%E7%8A%B6%E6%80%81"><span class="toc-number"></span> <span class="toc-text">查看文件状态</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%BF%BD%E7%95%A5%E6%96%87%E4%BB%B6"><span class="toc-number"></span> <span class="toc-text">忽略文件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E7%A0%81%E4%BA%91"><span class="toc-number">1.</span> <span class="toc-text">使用码云</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#github-%E6%98%AF%E6%9C%89%E5%A2%99%E7%9A%84%EF%BC%8C%E6%AF%94%E8%BE%83%E6%85%A2%EF%BC%8C%E5%9C%A8%E5%9B%BD%E5%86%85%E7%9A%84%E8%AF%9D%EF%BC%8C%E6%88%91%E4%BB%AC%E4%B8%80%E8%88%AC%E4%BD%BF%E7%94%A8-gitee-%EF%BC%8C%E5%85%AC%E5%8F%B8%E4%B8%AD%E6%9C%89%E6%97%B6%E5%80%99%E4%BC%9A%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84gitlab%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="toc-number"></span> <span class="toc-text">github 是有墙的，比较慢，在国内的话，我们一般使用 gitee ，公司中有时候会搭建自己的gitlab服务器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#IDEA%E4%B8%AD%E9%9B%86%E6%88%90Git"><span class="toc-number">1.</span> <span class="toc-text">IDEA中集成Git</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%AF%B4%E6%98%8E%EF%BC%9AGIT%E5%88%86%E6%94%AF"><span class="toc-number"></span> <span class="toc-text">说明：GIT分支</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#IDEA%E4%B8%AD%E6%93%8D%E4%BD%9C"><span class="toc-number"></span> <span class="toc-text">IDEA中操作</span></a></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2021/08/31/Git%E7%AC%94%E8%AE%B0/" title="Git笔记"><img src="https://cdn.jsdelivr.net/gh/waterchen520/cdn@5.0/qiqi/img/37.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Git笔记"/></a><div class="content"><a class="title" href="/2021/08/31/Git%E7%AC%94%E8%AE%B0/" title="Git笔记">Git笔记</a><time datetime="2021-08-31T07:12:10.000Z" title="发表于 2021-08-31 15:12:10">2021-08-31</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/08/30/Linux03%EF%BC%9AVim%E4%BD%BF%E7%94%A8%E5%8F%8A%E8%B4%A6%E5%8F%B7%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86Vim%E7%BC%96%E8%BE%91%E5%99%A8/" title="Linux03：Vim使用及账号用户管理Vim编辑器"><img src="https://cdn.jsdelivr.net/gh/waterchen520/cdn@5.0/qiqi/img/37.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Linux03：Vim使用及账号用户管理Vim编辑器"/></a><div class="content"><a class="title" href="/2021/08/30/Linux03%EF%BC%9AVim%E4%BD%BF%E7%94%A8%E5%8F%8A%E8%B4%A6%E5%8F%B7%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86Vim%E7%BC%96%E8%BE%91%E5%99%A8/" title="Linux03：Vim使用及账号用户管理Vim编辑器">Linux03：Vim使用及账号用户管理Vim编辑器</a><time datetime="2021-08-30T10:12:10.000Z" title="发表于 2021-08-30 18:12:10">2021-08-30</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/08/30/Linux02%EF%BC%9A%E5%B8%B8%E7%94%A8%E7%9A%84%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4%EF%BC%88%E5%BF%85%E6%8E%8C%E6%8F%A1%EF%BC%89/" title="Linux02：常用的基本命令（必掌握）"><img src="https://cdn.jsdelivr.net/gh/waterchen520/cdn@5.0/qiqi/img/37.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Linux02：常用的基本命令（必掌握）"/></a><div class="content"><a class="title" href="/2021/08/30/Linux02%EF%BC%9A%E5%B8%B8%E7%94%A8%E7%9A%84%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4%EF%BC%88%E5%BF%85%E6%8E%8C%E6%8F%A1%EF%BC%89/" title="Linux02：常用的基本命令（必掌握）">Linux02：常用的基本命令（必掌握）</a><time datetime="2021-08-30T01:12:10.000Z" title="发表于 2021-08-30 09:12:10">2021-08-30</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/08/29/Linux04%EF%BC%9A%E4%B8%89%E7%A7%8D%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E6%96%B9%E5%BC%8F%E5%8F%8A%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%9F%BA/" title="Linux04：三种软件安装方式及服务器"><img src="https://cdn.jsdelivr.net/gh/waterchen520/cdn@5.0/qiqi/img/37.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Linux04：三种软件安装方式及服务器"/></a><div class="content"><a class="title" href="/2021/08/29/Linux04%EF%BC%9A%E4%B8%89%E7%A7%8D%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85%E6%96%B9%E5%BC%8F%E5%8F%8A%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%9F%BA/" title="Linux04：三种软件安装方式及服务器">Linux04：三种软件安装方式及服务器</a><time datetime="2021-08-29T10:12:10.000Z" title="发表于 2021-08-29 18:12:10">2021-08-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/08/29/Linux%E5%85%A5%E9%97%A8%E6%A6%82%E8%BF%B0/" title="Linux入门概述"><img src="https://cdn.jsdelivr.net/gh/waterchen520/cdn@5.0/qiqi/img/37.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Linux入门概述"/></a><div class="content"><a class="title" href="/2021/08/29/Linux%E5%85%A5%E9%97%A8%E6%A6%82%E8%BF%B0/" title="Linux入门概述">Linux入门概述</a><time datetime="2021-08-29T10:12:10.000Z" title="发表于 2021-08-29 18:12:10">2021-08-29</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('https://cdn.jsdelivr.net/gh/waterchen520/cdn@5.0/qiqi/img/37.jpg')"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2021 By chen</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script>var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',preloader.endLoading())</script><div class="js-pjax"><script>function loadValine () {
+  function initValine () {
+    const valine = new Valine(Object.assign({
+      el: '#vcomment',
+      appId: 'RpKKIkVa6OteqG7hkkBuNy8E-MdYXbMMI',
+      appKey: 'CubJRLade0ckD1U5VI3bonbc',
+      placeholder: '记得留下你的暱称和邮箱....可以快速收到回復',
+      avatar: 'monsterid',
+      meta: 'nick,mail,link'.split(','),
+      pageSize: '10',
+      lang: 'en',
+      recordIP: false,
+      serverURLs: '',
+      emojiCDN: '',
+      emojiMaps: {"tv_doge":"6ea59c827c414b4a2955fe79e0f6fd3dcd515e24.png","tv_亲亲":"a8111ad55953ef5e3be3327ef94eb4a39d535d06.png","tv_偷笑":"bb690d4107620f1c15cff29509db529a73aee261.png","tv_再见":"180129b8ea851044ce71caf55cc8ce44bd4a4fc8.png","tv_冷漠":"b9cbc755c2b3ee43be07ca13de84e5b699a3f101.png","tv_发怒":"34ba3cd204d5b05fec70ce08fa9fa0dd612409ff.png","tv_发财":"34db290afd2963723c6eb3c4560667db7253a21a.png","tv_可爱":"9e55fd9b500ac4b96613539f1ce2f9499e314ed9.png","tv_吐血":"09dd16a7aa59b77baa1155d47484409624470c77.png","tv_呆":"fe1179ebaa191569b0d31cecafe7a2cd1c951c9d.png","tv_呕吐":"9f996894a39e282ccf5e66856af49483f81870f3.png","tv_困":"241ee304e44c0af029adceb294399391e4737ef2.png","tv_坏笑":"1f0b87f731a671079842116e0991c91c2c88645a.png","tv_大佬":"093c1e2c490161aca397afc45573c877cdead616.png","tv_大哭":"23269aeb35f99daee28dda129676f6e9ea87934f.png","tv_委屈":"d04dba7b5465779e9755d2ab6f0a897b9b33bb77.png","tv_害羞":"a37683fb5642fa3ddfc7f4e5525fd13e42a2bdb1.png","tv_尴尬":"7cfa62dafc59798a3d3fb262d421eeeff166cfa4.png","tv_微笑":"70dc5c7b56f93eb61bddba11e28fb1d18fddcd4c.png","tv_思考":"90cf159733e558137ed20aa04d09964436f618a1.png","tv_惊吓":"0d15c7e2ee58e935adc6a7193ee042388adc22af.png"},
+      enableQQ: false,
+      path: window.location.pathname,
+      requiredFields: ["nick,mail"],
+      visitor: false
+    }, null))
+  }
+
+  if (typeof Valine === 'function') initValine() 
+  else getScript('https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js').then(initValine)
+}
+
+if ('Valine' === 'Valine' || !true) {
+  if (true) btf.loadComment(document.getElementById('vcomment'),loadValine)
+  else setTimeout(loadValine, 0)
+} else {
+  function loadOtherComment () {
+    loadValine()
+  }
+}</script><script>function loadDisqus () {
+  var disqus_config = function () {
+    this.page.url = 'https://czyhash.github.io/2021/08/31/Git%E7%AC%94%E8%AE%B0/'
+    this.page.identifier = '2021/08/31/Git笔记/'
+    this.page.title = 'Git笔记'
+  };
+
+  window.disqusReset = () => {
+    DISQUS.reset({
+      reload: true,
+      config: disqus_config
+    })
+  }
+
+  if (window.DISQUS) disqusReset()
+  else {
+    (function() { 
+      var d = document, s = d.createElement('script');
+      s.src = 'https://.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  }
+}
+
+if ('Valine' === 'Disqus' || !true) {
+  if (true) btf.loadComment(document.getElementById('disqus_thread'), loadDisqus)
+  else loadDisqus()
+} else {
+  function loadOtherComment () {
+    loadDisqus()
+  }
+}
+</script></div><script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script><script src="/gitcalendar/js/gitcalendar.js"></script><canvas class="fireworks" mobile="false"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/fireworks.min.js"></script><script defer="defer" id="fluttering_ribbon" mobile="true" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-fluttering-ribbon.min.js"></script><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-nest.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+POWERMODE.shake = true;
+POWERMODE.mobile = true;
+document.body.addEventListener('input', POWERMODE);
+</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"jsonPath":"/live2dw/assets/haruto.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body></html>
