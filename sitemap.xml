@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://czyhash.github.io/2021/08/30/Linux03%EF%BC%9AVim%E4%BD%BF%E7%94%A8%E5%8F%8A%E8%B4%A6%E5%8F%B7%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86Vim%E7%BC%96%E8%BE%91%E5%99%A8/</loc>
+    
+    <lastmod>2021-08-30</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://czyhash.github.io/2021/08/29/Linux%E5%85%A5%E9%97%A8%E6%A6%82%E8%BF%B0/</loc>
     
     <lastmod>2021-08-29</lastmod>
@@ -88,7 +95,7 @@
 
   <url>
     <loc>https://czyhash.github.io/</loc>
-    <lastmod>2021-08-29</lastmod>
+    <lastmod>2021-08-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
