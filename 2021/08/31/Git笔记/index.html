@@ -194,7 +194,7 @@
 <p>2）、C:\Users\Administrator\ .gitconfig   只适用于当前登录用户的配置  –global 全局</p>
 <p>这里可以直接编辑配置文件，通过命令设置后会响应到这里。</p>
 <h1 id="设置用户名与邮箱（用户标识，必要）"><a href="#设置用户名与邮箱（用户标识，必要）" class="headerlink" title="设置用户名与邮箱（用户标识，必要）"></a>设置用户名与邮箱（用户标识，必要）</h1><p>当你安装Git后首先要做的事情是设置你的用户名称和e-mail地址。这是非常重要的，因为每次Git提交都会使用该信息。它被永远的嵌入到了你的提交中：</p>
-<p>git config –global user.name “chen” #名称git config –global user.email <a href="mailto:&#x32;&#x30;&#x31;&#55;&#55;&#50;&#x31;&#48;&#50;&#53;&#64;&#x71;&#x71;&#46;&#99;&#111;&#x6d;">&#x32;&#x30;&#x31;&#55;&#55;&#50;&#x31;&#48;&#50;&#53;&#64;&#x71;&#x71;&#46;&#99;&#111;&#x6d;</a>  #邮箱</p>
+<p>git config –global user.name “chen” #名称git config –global user.email <a href="mailto:&#50;&#x30;&#49;&#55;&#55;&#50;&#x31;&#x30;&#50;&#53;&#x40;&#x71;&#113;&#x2e;&#x63;&#x6f;&#109;">&#50;&#x30;&#49;&#55;&#55;&#50;&#x31;&#x30;&#50;&#53;&#x40;&#x71;&#113;&#x2e;&#x63;&#x6f;&#109;</a>  #邮箱</p>
 <p>只需要做一次这个设置，如果你传递了–global 选项，因为Git将总是会使用该信息来处理你在系统中所做的一切操作。如果你希望在一个特定的项目中使用不同的名称或e-mail地址，你可以在该项目中运行该命令而不要–global选项。总之–global为全局配置，不加为某个项目的特定配置。</p>
 <h3 id="Git基本理论（重要）"><a href="#Git基本理论（重要）" class="headerlink" title="Git基本理论（重要）"></a>Git基本理论（重要）</h3><h1 id="三个区域"><a href="#三个区域" class="headerlink" title="三个区域"></a>三个区域</h1><p>Git本地有三个工作区域：工作目录（Working Directory）、暂存区(Stage/Index)、资源库(Repository或Git Directory)。如果在加上远程的git仓库(Remote Directory)就可以分为四个工作区域。文件在这四个区域之间的转换关系如下：</p>
 <p><img src="https://cdn.jsdelivr.net/gh/czyhash/cdn/git9.png" alt="Git"></p>
