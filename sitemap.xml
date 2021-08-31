@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://czyhash.github.io/2021/08/31/%E7%8B%82%E7%A5%9E%E8%AF%B4Vue%E7%AC%94%E8%AE%B0/</loc>
+    
+    <lastmod>2021-08-31</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://czyhash.github.io/2021/08/31/Git%E7%AC%94%E8%AE%B0/</loc>
     
     <lastmod>2021-08-30</lastmod>
@@ -102,7 +109,7 @@
 
   <url>
     <loc>https://czyhash.github.io/</loc>
-    <lastmod>2021-08-30</lastmod>
+    <lastmod>2021-08-31</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
